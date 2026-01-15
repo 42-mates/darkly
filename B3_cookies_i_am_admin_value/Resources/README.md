@@ -1,10 +1,8 @@
 ## Exploitation process
 
-1. Open the browser’s Developer Tools by pressing `F12`
+1. Open the browser’s Developer Tools by pressing `F12`.
 
-2. Locate the cookies:
-  * FireFox: `Storage` -> `Cookies`
-  * For Chrome: `Application` -> `Stoirage` -> `Cookies`
+2. Locate the cookies (FireFox: `Storage` -> `Cookies`).
 
 3. The entry with the `Name``I_am_admin` has a `Value` of `68934a3e9455fa72420237eb05902327`, which appears to be a hash. According to [Cipher Identifier](https://www.dcode.fr/cipher-identifier), it uses the MD5 algorithm.
 
