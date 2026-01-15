@@ -7,7 +7,7 @@
 
 2. Found `/whatever/htpasswd` and `/admin/`
 
-4. Content was:
+4. Content of `htpasswd` was:
 ```
    root:437394baff5aa33daa618be47b75cb49
 ```
@@ -30,7 +30,6 @@
 
 The server should not display file lists for directories without an index file.
 
-For Nginx: remove `autoindex on;` or set it to `autoindex off;`.
 ```nginx
 location /whatever {
     autoindex off;
@@ -41,7 +40,6 @@ location /whatever {
 
 Ensure that hidden files (starting with a dot like `.htpasswd`) are denied access in the server configuration.
 
-Example for Nginx:
 ```nginx
 location ~ /\. {
     deny all;
@@ -51,3 +49,18 @@ location ~ /\. {
 ### 3. Stronger Hashing
 
 MD5 is obsolete and easily cracked. Use modern, slow hashing algorithms like **bcrypt** for storing passwords.
+
+### 4. Protect Admin Panel
+
+Admin panels should not be easily discoverable and require additional security layers:
+
+- **Add IP whitelisting**: Restrict admin access to specific IP addresses.
+- **Use strong authentication**: Implement multi-factor authentication (MFA) or OAuth instead of basic auth.
+- **Separate Subdomain**: Host the admin panel on a different subdomain (e.g., `admin.example.com`) with its own SSL certificate and stricter security policies.
+
+```nginx
+location /admin {
+    allow 192.168.1.100;
+    deny all;
+}
+```
