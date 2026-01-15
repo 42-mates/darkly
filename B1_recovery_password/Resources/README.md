@@ -1,7 +1,7 @@
 # How to get the key
 
 Open the survey page:
-http://ip/index.php?page=recover
+`http://<ip>/index.php?page=recover`
 
 Open ctivate the element inspector by `Ctrl + Shift + C`.
 
@@ -18,12 +18,12 @@ Here is the default mail, just change it:
 
 On the page, press submit button.
 
-It sends POST request and server return a data with the key
+It sends `POST` request and server return a data with the key
 
 According info about request from Dev Tools we can build script to get the same flag:
 
 ```
-curl -X POST "http://ip/index.php?page=recover" \
+curl -X POST "http://<ip>/index.php?page=recover" \
 	-H "Content-Type: application/x-www-form-urlencoded" \
 	-d "mail=anyfake@mail.com&Submit=Submit" \
 	| grep flag
@@ -35,6 +35,6 @@ curl -X POST "http://ip/index.php?page=recover" \
 2. Client-side validation does not check mail as mail: any random value for mail is accepted.
 3. Server-side validation is missing or insufficient:
 	- The backend accepts the manipulated value.
-	- The server responds with HTTP status code 200, indicating successful processing.
+	- The server responds with HTTP status code `200`, indicating successful processing.
 
 As a result, random and invalid data can be inserted into the database.

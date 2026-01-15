@@ -11,7 +11,11 @@
 5. Modify the generated fetch request by changing the filename parameter to an arbitrary value (ex: `fox.fox`, `2`, `fake_file.txt`, `my_evil_script.php`).
 
 Example snippet showing an original filename before manipulation:
-```... "body": "------geckoformboundary5729c51878379190f5e9b5c0f52bc2e8\r\nContent-Disposition: form-data; name=\"MAX_FILE_SIZE\"\r\n\r\n100000\r\n------geckoformboundary5729c51878379190f5e9b5c0f52bc2e8\r\nContent-Disposition: form-data; name=\"uploaded\"; filename=\"correct.jpeg\"\r\nContent-Type: image/jpeg\r\n\ ...```
+```
+... 
+"body": "------geckoformboundary5729c51878379190f5e9b5c0f52bc2e8\r\nContent-Disposition: form-data; name=\"MAX_FILE_SIZE\"\r\n\r\n100000\r\n------geckoformboundary5729c51878379190f5e9b5c0f52bc2e8\r\nContent-Disposition: form-data; name=\"uploaded\"; filename=\"correct.jpeg\"\r\nContent-Type: image/jpeg\r\n\ 
+...
+```
 
 6. Send the modified fetch request. Review the server response to find the flag.
 
