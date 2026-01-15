@@ -3,8 +3,7 @@
 Open the survey page:
 http://ip/index.php?page=recover
 
-Open the browser’s Developer Tools and activate the element inspector:
-Press Ctrl + Shift + C.
+Open ctivate the element inspector by `Ctrl + Shift + C`.
 
 Select submitt button.
 In the Developer Tools console, locate and modify the value of the email to any
