@@ -1,4 +1,4 @@
-### Exploitation process
+## Exploitation process
 
 1. Locate and click the hidden copyright link in the homepage footer:
 ```html
