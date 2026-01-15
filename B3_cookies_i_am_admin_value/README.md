@@ -6,7 +6,7 @@
   * FireFox: `Storage` -> `Cookies`
   * For Chrome: `Application` -> `Stoirage` -> `Cookies`
 
-3. The entry with the `Name``I_am_admin` has a `Value` of `68934a3e9455fa72420237eb05902327`, which appears to be a hash. According to [Cipher Identifier] (https://www.dcode.fr/cipher-identifier), it uses the MD5 algorithm.
+3. The entry with the `Name``I_am_admin` has a `Value` of `68934a3e9455fa72420237eb05902327`, which appears to be a hash. According to [Cipher Identifier](https://www.dcode.fr/cipher-identifier), it uses the MD5 algorithm.
 
 4. Decrypt the hash using [MD5-hash](https://www.dcode.fr/md5-hash). The decoded value is `false`. Reading the entry again shows that `I_am_admin` is set to `false`, indicating the user is not an administrator.
 
