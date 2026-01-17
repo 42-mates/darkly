@@ -11,13 +11,11 @@ On the login page, using a random username and a random password generates the f
 
 This URL can be added in a script to perform a password‑guessing attack by iterating through a list of commonly used passwords available online.
 
-For example, a collection of the 1,000 most common passwords was used to obtain the flag: [1,000 most common passwords](https://lucidar.me/en/security/list-of-1000-most-common-passwords/).
+For example, a collection of the 100 most common passwords was used to obtain the flag: [100 most common passwords](https://lucidar.me/en/security/list-of-100-most-common-passwords/).
 
-Username `admin` we can see after run the script:
-```bash
-   docker run --rm secfigo/nikto -h <ip>
-```
-**Nikto** is an Open Source (GPL) web server scanner. It performs comprehensive tests against web servers for multiple items, including potentially dangerous files, outdated server versions, and configuration issues.
+For example, a collection of the admin-users: [Wordlist Admin-User](https://www.scribd.com/document/461551487/wordlist-admin-user-txt?utm_source=chatgpt.com)
+
+But we know that the most popular admin name is `admin`, and when we did `A1_insecure_htpasswd`, we obtained information about the `root` user. These two can be placed at the top of the list to find the flag using brute force.
 
 ## How to Fix
 
