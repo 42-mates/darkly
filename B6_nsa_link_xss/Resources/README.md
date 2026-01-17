@@ -27,3 +27,5 @@ We use script `<script>alert('Dangerous content')</script>` encoded in Base64 `P
 3. Treat all user input as untrusted by default.
 
 4. Strict whitelist for the `src` parameter.
+
+5. Use security libraries or frameworks.
